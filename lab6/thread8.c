@@ -3,7 +3,7 @@
 
 void * function(void * ptr){
 	printf("Hello world, this is child thread!\n");
-	printf("I got a message: %s\n", ptr);
+	printf("I got a message: %s\n", (char*)ptr);
 	pthread_exit(NULL);
 }
 
