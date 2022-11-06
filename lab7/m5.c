@@ -6,7 +6,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-pthread_mutex_t mut;
+
+pthread_mutex_t mut = PTHREAD_MUTEX_INITIALIZER;
 int charcount = 0;
 
 void * f1(void * args) {
@@ -27,7 +28,7 @@ int main(int argc, char * argv[]) {
         printf("Input two text filenames.\n");
         exit(1);
     }
-    pthread_mutex_init(&mut,NULL);
+
     pthread_t tid1, tid2;
   
     pthread_create( & tid1, NULL, f1, (void*) argv[1]);
