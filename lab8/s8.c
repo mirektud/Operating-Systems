@@ -15,7 +15,6 @@ void * f1(void * parm){
 while(1){
 sem_wait(semA);
    fprintf(stderr, "2");
-sem_post(semB);
 }
 }
 
@@ -23,7 +22,6 @@ void * f2(void * parm){
 while(1){
 sem_wait(semB);
    fprintf(stderr, "8");
-sem_post(semA);
 }
 }
 
@@ -73,22 +71,22 @@ sem_wait(semG);
 int main() {
 
  char *name1 = "/sem1";
-    semA = sem_open(name1, O_CREAT, 0666, 1);
+    semA = sem_open(name1, O_CREAT, 0666, 0);
 
  char *name2 = "/sem2";
-    semB = sem_open(name2, O_CREAT, 0666, 1);
+    semB = sem_open(name2, O_CREAT, 0666, 0);
 
  char *name3 = "/sem3";
-    semC = sem_open(name3, O_CREAT, 0666, 1);
+    semC = sem_open(name3, O_CREAT, 0666, 0);
 
  char *name4 = "/sem4";
-    semD = sem_open(name4, O_CREAT, 0666, 1);
+    semD = sem_open(name4, O_CREAT, 0666, 0);
 
  char *name5 = "/sem5";
-    semE = sem_open(name5, O_CREAT, 0666, 1);
+    semE = sem_open(name5, O_CREAT, 0666, 0);
 
  char *name6 = "/sem6";
-    semF = sem_open(name6, O_CREAT, 0666, 1);
+    semF = sem_open(name6, O_CREAT, 0666, 0);
 
  char *name7 = "/sem7";
     semG = sem_open(name7, O_CREAT, 0666, 1);
