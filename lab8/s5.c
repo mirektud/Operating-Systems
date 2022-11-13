@@ -4,11 +4,11 @@
 #include <unistd.h>
 
 void * f1(void * parm) {
-    fprintf(stderr, " is fun.");
+    fprintf(stderr, " Operating Systems ");
 }
 
 void * f2(void * parm) {
-    fprintf(stderr, " Operating Systems");
+    fprintf(stderr, " is fun. ");
 }
 
 void * f3(void * parm) {
