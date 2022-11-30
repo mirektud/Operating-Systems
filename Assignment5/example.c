@@ -26,7 +26,6 @@ void * f1(void * parm){
 for (i=0; i<NUMBER_OF_1; i++){
  sem_wait(semA);
   fprintf(stderr, "1");
-// usleep(100);
  sem_post(semB);
  sem_post(semC);
  sem_post(semD);
