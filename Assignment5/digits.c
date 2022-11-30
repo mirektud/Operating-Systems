@@ -1,5 +1,5 @@
 /* ==================== digits.c ========================
- student ID number: 12131413
+ student ID number: 12345678
 =========================================================*/
 #include <pthread.h>
 #include <stdio.h>
@@ -11,14 +11,14 @@
 sem_t *semA, *semB, *semC, *semD, *semE, *semF, *semG, *semH;
 
 int i, j, k, l, m, n, o, p, q, r;
-int NUMBER_OF_1 = 4;  // number of 1s in your student ID 
+int NUMBER_OF_1 = 1;  // number of 1s in your student ID 
 int NUMBER_OF_2 = 1;  // number of 2s in your student ID
-int NUMBER_OF_3 = 2;  // number of 3s in your student ID
+int NUMBER_OF_3 = 1;  // number of 3s in your student ID
 int NUMBER_OF_4 = 1;  // number of 4s in your student ID
-int NUMBER_OF_5 = 0;  // number of 5s in your student ID
-int NUMBER_OF_6 = 0;  // number of 6s in your student ID
-int NUMBER_OF_7 = 0;  // number of 7s in your student ID
-int NUMBER_OF_8 = 0;  // number of 8s in your student ID
+int NUMBER_OF_5 = 1;  // number of 5s in your student ID
+int NUMBER_OF_6 = 1;  // number of 6s in your student ID
+int NUMBER_OF_7 = 1;  // number of 7s in your student ID
+int NUMBER_OF_8 = 1;  // number of 8s in your student ID
 int NUMBER_OF_9 = 0;  // number of 9s in your student ID
 int NUMBER_OF_0 = 0;  // number of 0s in your student ID
 
