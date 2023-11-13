@@ -28,7 +28,6 @@ for (i=0; i<NUMBER_OF_1; i++){
   fprintf(stderr, "1");
  sem_post(semB);
  sem_post(semC);
- sem_post(semD);
 }
 }
 
@@ -38,9 +37,7 @@ for (j=0; j<NUMBER_OF_2; j++){
   fprintf(stderr, "2");
  sem_post(semA);
  sem_wait(semC);
- sem_wait(semD);
  sem_post(semE);
- sem_wait(semF);
 }
 }
 void * f3(void * parm){
@@ -48,16 +45,12 @@ for (k=0; k<NUMBER_OF_3; k++){
  sem_wait(semC);
  sem_wait(semE);
   fprintf(stderr,"3");
- sem_post(semA);
- sem_wait(semB);
- sem_wait(semD);
- sem_post(semF);
+ sem_wait(semA);
 }
 }
 void * f4(void * parm){
 for (l=0; l<NUMBER_OF_4; l++){
  sem_wait(semD);
- sem_wait(semF);
   fprintf(stderr, "4");
 }
 }
@@ -136,4 +129,3 @@ sem_unlink(name6);
 printf("\n");
 return 0;
 }
-
