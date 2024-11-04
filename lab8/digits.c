@@ -24,57 +24,42 @@ int NUMBER_OF_0 = 0;  // number of 0s in your student ID
 
 void * f1(void * parm){      //function f1 prints "1"
 for (i=0; i<NUMBER_OF_1; i++){
-sem_wait(semA);
   fprintf(stderr, "1");
-sem_post(semB);
 }
 }
 
 void * f2(void * parm){      //function f2 prints "2"
 for (j=0; j<NUMBER_OF_2; j++){
-sem_wait(semB);
   fprintf(stderr, "2");
-sem_post(semC);
 }
 }
 void * f3(void * parm){      //function f3 prints "3"
 for (k=0; k<NUMBER_OF_3; k++){
-sem_wait(semC);
   fprintf(stderr,"3");
-sem_post(semD);
 }
 }
 void * f4(void * parm){      //function f4 prints "4"
 for (l=0; l<NUMBER_OF_4; l++){
-sem_wait(semD);
   fprintf(stderr, "4");
-sem_post(semE);
 }
 }
 void * f5(void * parm){      //function f5 prints "5"
 for (m=0; m<NUMBER_OF_5; m++){
-sem_wait(semE);
  fprintf(stderr, "5");
-sem_post(semF);
 }
 }
 void * f6(void * parm){      //function f6 prints "6"
 for (n=0; n<NUMBER_OF_6; n++){
-sem_wait(semF);
  fprintf(stderr, "6");
-sem_post(semG);
 }
 }
 void * f7(void * parm){      //function f7 prints "7"
 for (o=0; o<NUMBER_OF_7; o++){
-sem_wait(semG);
  fprintf(stderr,"7");
-sem_post(semH);
 }
 }
 void * f8(void * parm){      //function f8 prints "8"
 for (p=0; p<NUMBER_OF_8; p++){
-sem_wait(semH);
  fprintf(stderr, "8");
 }
 }
